@@ -2856,6 +2856,31 @@ are such installations. Found by looking at the source photographs, not from any
 **describe a class as "a statue or fixed installation", never as one physical object**, and
 check what a figure's photographs show before a caption calls two of them the same statue.
 
+### 11.7 The backbone figure reads without its caption (2026-11-19)
+
+The thirteen-backbone forest plot was redesigned at the author's request so its point is
+visible at a glance. The data and every generated number are unchanged.
+
+- **Its panel letters had sat over the gaps between panels.** The panels have no y-axis of
+  their own, so §7.14's top-left tag hung in the gap and read as belonging to neither
+  neighbour. Each panel now carries a title above its plot, "(a) Top-1 accuracy" with the unit
+  beneath, in place of a bare letter and an axis label at the bottom.
+  `style.panel_tag(..., centred=True)` exists for a panel with no y-axis; every other figure
+  keeps the top-left tag.
+- **Right is better in every panel**, and the figure says so. The photographer effect is the
+  one measure where smaller is better, so its axis is reversed and its unit line says
+  "reversed". A reader no longer has to work out each panel's good direction.
+- **Paradigms are ordered by their best top-1, best first**, and models within a paradigm the
+  same way, with ties keeping the paper's order (`by_accuracy`). The supplement's tables keep
+  `FAMILIES`' order, the one the text discusses them in.
+- **A light band behind every other paradigm** runs across the labels and all five panels, so
+  a row can be followed from its name to its fifth dot. `BAND` is lighter than the grid, and
+  the grid is drawn in `GRID_ON_BAND` so it stays visible across a band.
+- A title drawn with `axes.text` counts toward constrained layout: titles wider than a panel
+  silently shrank every plot to a third of its cell. Keep each title within its panel's width
+  and look at the render.
+- Regenerated with `visualize family` and re-copied to `docs/figures/paper-family.png` (§6.7).
+
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.
 - Keep `CHANGELOG.md` current throughout implementation. Every material addition, change, fix, removal, or documentation milestone must be recorded under an `Unreleased` section as part of the same change.

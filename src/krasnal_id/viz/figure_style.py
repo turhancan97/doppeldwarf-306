@@ -47,6 +47,8 @@ INK = "#1F2328"  # titles, values, direct labels
 INK_SECONDARY = "#57606A"  # axis labels, annotations
 INK_MUTED = "#8C959F"  # reference lines, "wrong" frames
 GRID = "#E6E8EB"
+BAND = "#F3F4F6"  # a row band behind every other group, lighter than the grid
+GRID_ON_BAND = "#DADDE1"  # the grid where it must stay visible across a band
 NEUTRAL_FILL = "#C9D1D9"  # data that is not an entity: corpus statistics, statues on a map
 
 # --- entities ---------------------------------------------------------------
@@ -180,14 +182,19 @@ def apply(plt: Any) -> None:
     plt.rcParams.update(rc_parameters())
 
 
-def panel_tag(axes: Any, letter: str) -> None:
-    """Put a bold (a)-style tag at the top left of one panel, outside the plot area."""
+def panel_tag(axes: Any, letter: str, centred: bool = False) -> None:
+    """Put a bold (a)-style tag above one panel: at its top left, or centred over it.
+
+    The top-left tag hangs in the margin a y-axis leaves. A panel with no y-axis of its
+    own has no such margin, so there the tag would sit over the gap to its neighbour and
+    read as belonging to neither; `centred` sets it over the middle of the plot instead.
+    """
     axes.text(
-        -0.02,
+        0.5 if centred else -0.02,
         1.04,
         f"({letter})",
         transform=axes.transAxes,
-        ha="right",
+        ha="center" if centred else "right",
         va="bottom",
         fontsize=SIZE_PANEL,
         fontweight="bold",

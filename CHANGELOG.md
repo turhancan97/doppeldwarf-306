@@ -29,6 +29,11 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ### Fixed
 
+- The backbone-comparison figure is redesigned to be read without its caption, in the paper and
+  on the project page: each panel is titled above its plot (the letters had sat over the gaps
+  between panels), right is better in every panel with the photographer effect on a reversed
+  axis, paradigms are ordered by their best top-1, and a light band behind every other paradigm
+  carries the eye across the panels. The data is unchanged.
 - The project page's teaser described three groups of pillar dwarves as single statues. Its
   caption and image description now say each is a group of several figures, and that the
   winning photograph shows a different figure of the query's own group.
