@@ -2566,6 +2566,11 @@ that would bring it back.
   interval on the measured 306-class figure. **The general lesson is the §6.4 rule applied outward:
   a number taken from the world needs a source the same way a number taken from an experiment needs
   an artifact.** `RESULTS.md` §2 still says 1,400 and should be corrected when it is next touched.
+  **Corrected on 2026-11-19: the portal does not state 1,040 either.** Six of its pages were
+  fetched and only "about 360" for 2020 appears, on `ile-krasnali-jest-we-wroclawiu/`. The
+  thousandth-statue, 1,040 and 1,425 figures have no source this project verified, so
+  `RESULTS.md` now calls 1,040 an assumed pool size and the paper says "several hundred".
+  The lesson above was right and was not applied to its own replacement number.
 - **The manuscript carries a Related Work section, which *Scientific Reports* does not normally
   have (2026-09-15).** Nature Portfolio research articles run Introduction, Results, Discussion,
   Methods, and `sn-jnl` is built for exactly that; a separate numbered section 2 is a
