@@ -12,6 +12,9 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ### Changed
 
+- The explainer film on the project page is re-rendered with the new addresses: its closing scene
+  and credits frame show `turhancan97.github.io/doppeldwarf-306`, and its credits and transcript
+  pages link the renamed repository. Narration, script, length and captions are unchanged.
 - The repository is now `turhancan97/doppeldwarf-306` and the Hugging Face dataset
   `turhancan97/doppeldwarf-306`; the project page moved to
   `turhancan97.github.io/doppeldwarf-306/`. Every link in the README, guides, results record,

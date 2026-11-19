@@ -1,5 +1,5 @@
 {
-  "video_sha256": "55d2439e893bd9bcde567eeb7f1114568fff554f22b95a71d3d33c82f6c66f31",
+  "video_sha256": "ae201e52fa09d06087523eef225f52296cbae44df9c39e35c8e16fdd688e765e",
   "cue_samples": [
     {
       "cue": 1,
@@ -474,8 +474,8 @@
       "time": 106.21041666666667,
       "expected": "The lesson: test the pool, the place,",
       "image": "cue-53.png",
-      "text_mask_sha256": "a38dfc7072eaa311bb0785f4ab0277ddf567f4e73b53f44e6dcb3dd93ad262b3",
-      "ink": 5390,
+      "text_mask_sha256": "4ebdb5ef82efdca0f002bc74d94509cc8f089626d04aa7e275f95ade9102ed50",
+      "ink": 5389,
       "text_height_at_half_resolution_px": 41
     },
     {
@@ -483,8 +483,8 @@
       "time": 107.95416666666668,
       "expected": "and the photographer.",
       "image": "cue-54.png",
-      "text_mask_sha256": "bf04b920923f22a26af8b1785a7a5321e584067bf358e8d7bcbf92e9efdbdda0",
-      "ink": 3646,
+      "text_mask_sha256": "e5d645d4579df4429f9a26c8c773cdfdfefffa4f442785ac0bff6dba81dd0765",
+      "ink": 3644,
       "text_height_at_half_resolution_px": 41
     },
     {
@@ -492,8 +492,8 @@
       "time": 109.52916666666667,
       "expected": "Explore the dataset, and try the",
       "image": "cue-55.png",
-      "text_mask_sha256": "79568754be8bab5c9ab067e1d37bd8c01e1cf1e4bc47ee139d150252b9f079b2",
-      "ink": 4998,
+      "text_mask_sha256": "bc6272a1e982aeb1a12d56cd8422d2fc45609f039d63c4398f83c1f4ab154a48",
+      "ink": 5010,
       "text_height_at_half_resolution_px": 41
     },
     {
@@ -501,8 +501,8 @@
       "time": 111.14208333333333,
       "expected": "identifier.",
       "image": "cue-56.png",
-      "text_mask_sha256": "1dfca7c6a80025bea1512f0c86c99fbe45a260501b08e7c988737eb0574b3a99",
-      "ink": 1539,
+      "text_mask_sha256": "23e38e093edc3e5dda82e4307fd672cad7da01160dc23821485752fa84ba369c",
+      "ink": 1538,
       "text_height_at_half_resolution_px": 32
     }
   ],

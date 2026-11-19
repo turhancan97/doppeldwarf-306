@@ -2840,9 +2840,13 @@ request, so the public names match the paper's name for the corpus.
   the author on the site; `export/kaggle.py` carries the same title for the next version.
 - **The software is still Krasnal-ID**: the package, the `krasnal-id` command, `CITATION.cff`'s
   title and the Zenodo record keep that name. Doppeldwarf-306 names the corpus and the paper.
-- **The delivered explainer film still shows the old project-page address on screen**, in two
-  frames (`video/explainer/scenes.py`). Its source and receipts are left as delivered; fixing
-  it means re-rendering the film.
+- **The explainer film was re-rendered on 2026-11-19 with the new addresses.** Its closing scene
+  and credits frame now show `turhancan97.github.io/doppeldwarf-306`, and its credits and
+  transcript pages link the renamed repository. The narration never speaks an address, so the
+  approved audio and script (§6.11, §6.12) were reused unchanged and nothing was synthesised.
+  The build, caption-frame and delivered-audio receipts were rewritten by the film's own
+  stages; `production/browser-checks.json` was not re-run and still records the previous
+  encode's hash. Both changed frames were looked at before the file was replaced.
 - Earlier sections that say `wroclaw-dwarves` or `krasnal-id` for these addresses describe the
   names at the time they were written.
 

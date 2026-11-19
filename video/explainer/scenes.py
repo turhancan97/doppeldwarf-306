@@ -431,7 +431,7 @@ def takeaway():
         Line([-4, 1.5, 0], [-0.7, 1.5, 0], color=RULE, stroke_width=4),
         Line([0.7, 1.5, 0], [4, 1.5, 0], color=RULE, stroke_width=4),
         at(label("Doppeldwarf-306", 52), 0, -1.0),
-        at(label("turhancan97.github.io/krasnal-id/demo.html", 28, P["blue"], 13.9), 0, -2.0),
+        at(label("turhancan97.github.io/doppeldwarf-306/demo.html", 28, P["blue"], 13.9), 0, -2.0),
     )
     return group
 
@@ -460,7 +460,7 @@ def credits():
             0,
             -2.35,
         ),
-        at(label("turhancan97.github.io/krasnal-id", 30, P["blue"]), 0, -3.3),
+        at(label("turhancan97.github.io/doppeldwarf-306", 30, P["blue"]), 0, -3.3),
     )
     return group
 
