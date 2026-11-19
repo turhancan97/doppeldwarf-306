@@ -769,9 +769,11 @@ already on screen rather than asking for it again.
   extended with an affiliation.
 - **Research text traces to artifacts.** The abstract is the plain-HTML transcription of the
   paper abstract, with every number macro resolved from its generated TeX fragments and intervals
-  written as “lo to hi”. Key-result text uses `RESULTS.md` or those same macros. Paired matcher
-  gains in the abstract are 2.5 and 3.6 points; endpoint accuracies in the cards are independently
-  rounded and must not be used to re-derive those gains. Dataset counts and licence families trace
+  written as “lo to hi”. Key-result text uses `RESULTS.md` or those same macros. Since 2026-11-19 the
+  abstract leads with DINOv2's own numbers and states the unseen-photographer result as absolute
+  accuracies (81.8% rising to as much as 85.5%), not as gains; the paired gains of 2.5 and 3.6
+  points are in the verification card, and endpoint accuracies are independently rounded and must
+  not be used to re-derive them. Dataset counts and licence families trace
   to §12.1 and §5.11, and the depicted-work disclosure and removal path follow `export/card.py`.
   The geographic claim explicitly covers 294 of 306 statues and identifies derived positions.
 - **Published figures are copies, never hand edits**, under §6.4 and §7.14. Each source below is
