@@ -8,6 +8,13 @@ interval is the statue-level bootstrap the validation artifact carries.
 Rows are labelled directly, so colour carries no identity here. The four backbones
 the rest of the paper draws keep their own colours, because colour follows the
 entity (``figure_style``); the nine that appear only in this figure wear ink.
+
+The figure is built to be read without its caption. Every panel is titled above
+its plot and **right is better in every panel**: the one measure where a smaller
+number is better is drawn on a reversed axis. Paradigms are ordered by their best
+top-1, best first, and a light band behind every other paradigm carries the eye
+across the five panels, so the reader sees which kinds of pretraining sit on the
+right throughout and which on the left.
 """
 
 from collections.abc import Mapping, Sequence
@@ -68,20 +75,29 @@ MODEL_DETAILS: dict[str, tuple[str, str, int, str]] = {
 
 @dataclass(frozen=True, slots=True)
 class Panel:
-    """One measurement: the metric suffix, its axis label, and how to scale it."""
+    """One measurement: the metric suffix, its title and unit, and how to draw it."""
 
     suffix: str
-    label: str
+    title: str
+    unit: str
     scale: float = 100.0
     zero_line: bool = False
+    # A measure where smaller is better is drawn right to left, so right is always better.
+    reverse: bool = False
 
 
 PANELS: tuple[Panel, ...] = (
-    Panel("top_1", "Top-1\n(%)"),
-    Panel("points_per_doubling", "Change per\ndoubling (points)", scale=1.0, zero_line=True),
-    Panel("geo_minus_random_pool_10", "Location \u2212 random,\npool 10 (points)", zero_line=True),
-    Panel("photographer_attributable", "Photographer\neffect (points)", zero_line=True),
-    Panel("reject_margin_auroc", "Margin-score\nAUROC", scale=1.0),
+    Panel("top_1", "Top-1 accuracy", "%"),
+    Panel("points_per_doubling", "Pool doubling", "points per doubling", scale=1.0, zero_line=True),
+    Panel("geo_minus_random_pool_10", "Near vs random", "points, pool of ten", zero_line=True),
+    Panel(
+        "photographer_attributable",
+        "Photographer",
+        "points lost (reversed)",
+        zero_line=True,
+        reverse=True,
+    ),
+    Panel("reject_margin_auroc", "Rejection", "margin AUROC", scale=1.0),
 )
 
 
@@ -117,13 +133,34 @@ def collect(
     return found
 
 
-def rows() -> list[tuple[str | None, str | None]]:
+def rows(
+    families: Sequence[tuple[str, Sequence[str]]] = FAMILIES,
+) -> list[tuple[str | None, str | None]]:
     """The plotted rows top to bottom: a family heading, then its models."""
     laid_out: list[tuple[str | None, str | None]] = []
-    for family, models in FAMILIES:
+    for family, models in families:
         laid_out.append((family, None))
         laid_out.extend((None, model) for model in models)
     return laid_out
+
+
+def by_accuracy(
+    estimates: Mapping[tuple[str, str], Estimate],
+    families: Sequence[tuple[str, Sequence[str]]] = FAMILIES,
+) -> list[tuple[str, tuple[str, ...]]]:
+    """Paradigms by their best top-1, best first, and their models the same way.
+
+    Ties keep the order the paper discusses them in, so the layout is a function of
+    the artifact alone.
+    """
+
+    def top_1(model: str) -> float:
+        return estimates[(model, "top_1")].value
+
+    ordered = [
+        (family, tuple(sorted(models, key=lambda m: -top_1(m)))) for family, models in families
+    ]
+    return sorted(ordered, key=lambda item: -top_1(item[1][0]))
 
 
 def render_family_figure(
@@ -137,10 +174,13 @@ def render_family_figure(
     matplotlib.use("Agg")
     plt = import_optional_analysis("matplotlib.pyplot")
     ticker = import_optional_analysis("matplotlib.ticker")
+    patches = import_optional_analysis("matplotlib.patches")
+    transforms = import_optional_analysis("matplotlib.transforms")
     style.apply(plt)
-    laid_out = rows()
-    models = [model for _, model in laid_out if model is not None]
-    estimates = collect(metrics, models)
+    every_model = [model for _, members in FAMILIES for model in members]
+    estimates = collect(metrics, every_model)
+    families = by_accuracy(estimates)
+    laid_out = rows(families)
     height = 0.125 * len(laid_out) + 0.45
     label_share = 0.20
     figure = plt.figure(figsize=(width, height), layout="constrained")
@@ -157,7 +197,7 @@ def render_family_figure(
     for row, (family, model) in zip(y, laid_out, strict=True):
         if family is not None:
             labels.text(
-                0,
+                0.02,
                 row,
                 family,
                 fontsize=style.SIZE_LABEL,
@@ -169,7 +209,7 @@ def render_family_figure(
         else:
             assert model is not None
             labels.text(
-                0.06,
+                0.08,
                 row,
                 MODEL_LABEL[model],
                 fontsize=style.SIZE_TICK,
@@ -177,14 +217,43 @@ def render_family_figure(
                 va="center",
                 ha="left",
             )
+    # A band behind every other paradigm, across the labels and all five panels.
+    across = transforms.blended_transform_factory(figure.transFigure, labels.transData)
+    top = len(laid_out) - 0.5
+    for index, (_, members) in enumerate(families):
+        bottom = top - (len(members) + 1)
+        if index % 2 == 0:
+            figure.add_artist(
+                patches.Rectangle(
+                    (0.004, bottom),
+                    0.992,
+                    top - bottom,
+                    transform=across,
+                    facecolor=style.BAND,
+                    edgecolor="none",
+                    zorder=0,
+                )
+            )
+        top = bottom
+    labels.text(
+        0.02,
+        1.035,
+        "Right is better \N{RIGHTWARDS ARROW}",
+        transform=labels.transAxes,
+        fontsize=style.SIZE_ANNOTATION,
+        color=style.INK_SECONDARY,
+        va="bottom",
+        ha="left",
+    )
     for column, panel in enumerate(PANELS, start=1):
         axes = figure.add_subplot(grid[0, column], sharey=labels)
+        axes.set_facecolor("none")
         axes.set_ylim(-0.6, len(laid_out) - 0.4)
         axes.tick_params(left=False, labelleft=False)
         for side in ("left", "right", "top"):
             axes.spines[side].set_visible(False)
         axes.grid(False)
-        axes.grid(axis="x", color=style.GRID, linewidth=style.AXIS_LINE_WIDTH)
+        axes.grid(axis="x", color=style.GRID_ON_BAND, linewidth=style.AXIS_LINE_WIDTH)
         axes.set_axisbelow(True)
         if panel.zero_line:
             axes.axvline(0, color=style.INK_MUTED, linewidth=style.REFERENCE_LINE_WIDTH)
@@ -212,9 +281,31 @@ def render_family_figure(
                 markeredgewidth=0.6,
                 linestyle="none",
             )
-        axes.set_xlabel(panel.label, fontsize=style.SIZE_LABEL, color=style.INK_SECONDARY)
+        if panel.reverse:
+            axes.invert_xaxis()
         axes.xaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: style.minus(f"{v:g}")))
-        style.panel_tag(axes, "abcdefgh"[column - 1], centred=True)
+        letter = "abcdefgh"[column - 1]
+        axes.text(
+            0.5,
+            1.085,
+            f"({letter}) {panel.title}",
+            transform=axes.transAxes,
+            fontsize=style.SIZE_TICK,
+            fontweight="bold",
+            color=style.INK,
+            va="bottom",
+            ha="center",
+        )
+        axes.text(
+            0.5,
+            1.035,
+            panel.unit,
+            transform=axes.transAxes,
+            fontsize=style.SIZE_ANNOTATION,
+            color=style.INK_SECONDARY,
+            va="bottom",
+            ha="center",
+        )
     written = style.save(figure, path, dpi)
     plt.close(figure)
     return written

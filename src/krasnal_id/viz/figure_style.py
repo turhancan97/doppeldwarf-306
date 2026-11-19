@@ -47,6 +47,8 @@ INK = "#1F2328"  # titles, values, direct labels
 INK_SECONDARY = "#57606A"  # axis labels, annotations
 INK_MUTED = "#8C959F"  # reference lines, "wrong" frames
 GRID = "#E6E8EB"
+BAND = "#F3F4F6"  # a row band behind every other group, lighter than the grid
+GRID_ON_BAND = "#DADDE1"  # the grid where it must stay visible across a band
 NEUTRAL_FILL = "#C9D1D9"  # data that is not an entity: corpus statistics, statues on a map
 
 # --- entities ---------------------------------------------------------------

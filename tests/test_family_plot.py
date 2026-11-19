@@ -6,7 +6,15 @@ import pytest
 
 from krasnal_id.config import backbone_config
 from krasnal_id.viz.embedding_plot import VisualizationError
-from krasnal_id.viz.family_plot import FAMILIES, MODEL_LABEL, PANELS, collect, rows
+from krasnal_id.viz.family_plot import (
+    FAMILIES,
+    MODEL_LABEL,
+    PANELS,
+    Estimate,
+    by_accuracy,
+    collect,
+    rows,
+)
 
 
 def test_every_model_is_a_packaged_backbone_in_exactly_one_family() -> None:
@@ -21,6 +29,23 @@ def test_rows_put_each_heading_above_its_members() -> None:
     assert laid_out[0] == ("Joint-embedding", None)
     assert laid_out[1:4] == [(None, "dino"), (None, "dinov2"), (None, "dinov3")]
     assert sum(family is not None for family, _ in laid_out) == len(FAMILIES)
+
+
+def test_paradigms_and_their_models_are_ordered_by_top_1_best_first() -> None:
+    scores = {"a": 80.0, "b": 95.0, "c": 90.0, "d": 90.0}
+    estimates = {(model, "top_1"): Estimate(value, None, None) for model, value in scores.items()}
+    families = (("First", ("a", "b")), ("Second", ("c",)), ("Third", ("d",)))
+    ordered = by_accuracy(estimates, families)
+    # The best model leads its paradigm, the best paradigm leads the figure, and a tie
+    # keeps the order the paradigms were given in.
+    assert ordered == [("First", ("b", "a")), ("Second", ("c",)), ("Third", ("d",))]
+    assert rows(ordered)[:3] == [("First", None), (None, "b"), (None, "a")]
+
+
+def test_right_is_better_in_every_panel() -> None:
+    # Only the photographer effect is better when smaller, so only it is reversed.
+    assert [panel.suffix for panel in PANELS if panel.reverse] == ["photographer_attributable"]
+    assert all(panel.title and panel.unit for panel in PANELS)
 
 
 def test_a_missing_estimate_is_refused_and_present_ones_are_scaled() -> None:
