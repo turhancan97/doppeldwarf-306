@@ -1,4 +1,4 @@
-repo_id: turhancan97/wroclaw-dwarves
+repo_id: turhancan97/doppeldwarf-306
 # The Kaggle username differs from the GitHub and Hugging Face one.
 kaggle_id: turhancankargin/wroclaw-dwarves
 backbones: [dinov2, clip]

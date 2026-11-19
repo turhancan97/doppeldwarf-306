@@ -48,7 +48,7 @@ TITLE_LIMITS = (6, 50)
 SUBTITLE_LIMITS = (20, 80)
 SLUG_LIMITS = (3, 50)
 
-TITLE = "Wrocław Dwarves: Fine-Grained Instance Retrieval"
+TITLE = "Doppeldwarf-306: Fine-Grained Instance Retrieval"
 SUBTITLE = "1,691 attributed photographs of 306 near-identical bronze statues"
 
 # Kaggle accepts exactly one licence for a dataset, from this list. This corpus
@@ -469,9 +469,9 @@ def render_description(facts: card_module.CardFacts, dataset_id: str, images: bo
         "",
         "## Source",
         "",
-        f"Code, method and full results: https://github.com/turhancan97/krasnal-id — "
+        f"Code, method and full results: https://github.com/turhancan97/doppeldwarf-306 — "
         f"DOI {card_module.PROJECT_DOI}. The same corpus is published on Hugging Face as "
-        "`turhancan97/wroclaw-dwarves`, in parquet with the images embedded.",
+        "`turhancan97/doppeldwarf-306`, in parquet with the images embedded.",
     ]
     return "\n".join(lines) + "\n"
 

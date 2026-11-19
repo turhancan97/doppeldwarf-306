@@ -4,9 +4,9 @@
 </picture>
 
 [![DOI](https://zenodo.org/badge/1339843718.svg)](https://doi.org/10.5281/zenodo.22548023)
-[![CI](https://github.com/turhancan97/krasnal-id/actions/workflows/ci.yml/badge.svg)](https://github.com/turhancan97/krasnal-id/actions/workflows/ci.yml)
+[![CI](https://github.com/turhancan97/doppeldwarf-306/actions/workflows/ci.yml/badge.svg)](https://github.com/turhancan97/doppeldwarf-306/actions/workflows/ci.yml)
 [![Code licence: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Dataset on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-wroclaw--dwarves-yellow)](https://huggingface.co/datasets/turhancan97/wroclaw-dwarves)
+[![Dataset on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-doppeldwarf--306-yellow)](https://huggingface.co/datasets/turhancan97/doppeldwarf-306)
 
 **Which dwarf is this?** Wrocław has hundreds of small bronze dwarf statues, many made in themed
 series and alike in style, scale and setting. **Krasnal-ID** identifies one from a photograph, and
@@ -14,8 +14,8 @@ measures how hard that gets as the number of candidate statues grows. Its corpus
 **Doppeldwarf-306**, holds 1,691 openly licensed photographs of 306 statues, each carrying its
 source, photographer and licence, with 294 statues placed on the map.
 
-[**Try the identifier**](https://turhancan97.github.io/krasnal-id/demo.html) (runs in your browser; nothing
-is uploaded) · [**Dataset on Hugging Face**](https://huggingface.co/datasets/turhancan97/wroclaw-dwarves)
+[**Try the identifier**](https://turhancan97.github.io/doppeldwarf-306/demo.html) (runs in your browser; nothing
+is uploaded) · [**Dataset on Hugging Face**](https://huggingface.co/datasets/turhancan97/doppeldwarf-306)
 · [**Dataset on Kaggle**](https://www.kaggle.com/datasets/turhancankargin/wroclaw-dwarves) ·
 [**Full results**](RESULTS.md)
 

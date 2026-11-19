@@ -4,7 +4,7 @@
 
 ## Interactive demonstration
 
-The published demo at <https://turhancan97.github.io/krasnal-id/demo.html> is a static page: it embeds an
+The published demo at <https://turhancan97.github.io/doppeldwarf-306/demo.html> is a static page: it embeds an
 uploaded photograph with a quantised ONNX backbone in the visitor's own browser and ranks it
 against reference vectors built by the same code, so nothing is uploaded and there is no backend.
 The [project page](../docs/index.html) introduces the research and dataset; the identifier lives

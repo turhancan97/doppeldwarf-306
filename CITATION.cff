@@ -21,8 +21,8 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.22548023"
     description: "The concept DOI, resolving to the latest release."
-repository-code: "https://github.com/turhancan97/krasnal-id"
-url: "https://turhancan97.github.io/krasnal-id/"
+repository-code: "https://github.com/turhancan97/doppeldwarf-306"
+url: "https://turhancan97.github.io/doppeldwarf-306/"
 keywords:
   - instance retrieval
   - fine-grained recognition

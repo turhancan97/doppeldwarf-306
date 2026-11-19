@@ -274,7 +274,8 @@ starting a build.
 
 ### 5.11 Dataset redistribution decision (2026-09-06)
 
-Published to Hugging Face as `turhancan97/wroclaw-dwarves`, tier 3 — the photographs, the
+Published to Hugging Face as `turhancan97/wroclaw-dwarves` (renamed `turhancan97/doppeldwarf-306` on
+2026-11-19, §11.5), tier 3 — the photographs, the
 metadata and the embeddings — public and ungated. This records what the licences permit, measured
 from the manifest rather than assumed. **Not legal advice**: confirm the terms before any upload.
 
@@ -562,7 +563,7 @@ loaders saw — scored 86.8% (DINOv2) and 71.1% (CLIP).
   dataset it scored 66% top-1 against 96% at `C=100`. The default is 100.
 ### 6.3 Browser demo decisions (2026-09-02)
 
-The published identifier at `turhancan97.github.io/krasnal-id/demo.html` is static: GitHub Pages cannot run the
+The published identifier at `turhancan97.github.io/doppeldwarf-306/demo.html` is static: GitHub Pages cannot run the
 Gradio app, so the model runs in the visitor's browser instead. Four decisions there were measured
 rather than assumed, and each cost accuracy when guessed wrong.
 
@@ -2822,6 +2823,28 @@ of §11.3 is the only paper. This replaces "fallback" wherever §8, §11.1, §11
   the preprint for the same reason.
 - **The package needs XeLaTeX**, because the fonts are loaded by file name through `fontspec`
   (§7.13). Only the local XeTeX-based build was tested; check the server's own PDF after upload.
+
+### 11.5 Public names (2026-11-19)
+
+**The repository and the Hugging Face dataset are named `doppeldwarf-306`**, at the author's
+request, so the public names match the paper's name for the corpus.
+
+- **GitHub: `turhancan97/doppeldwarf-306`.** Old `github.com/turhancan97/krasnal-id` links
+  redirect. **The project page moved to `turhancan97.github.io/doppeldwarf-306/` and the old
+  Pages address does not redirect.** Do not create a new repository called `krasnal-id` to
+  restore it: that would break the `github.com` redirect, which the Zenodo records rely on.
+- **Hugging Face: `turhancan97/doppeldwarf-306`**; the old dataset id redirects. Its card title
+  and `pretty_name` are "Doppeldwarf-306 — Fine-Grained Instance Retrieval".
+- **Kaggle keeps `turhancankargin/wroclaw-dwarves`**, because a slug cannot change (§5.13). Only
+  its title becomes "Doppeldwarf-306: Fine-Grained Instance Retrieval", 48 characters, set by
+  the author on the site; `export/kaggle.py` carries the same title for the next version.
+- **The software is still Krasnal-ID**: the package, the `krasnal-id` command, `CITATION.cff`'s
+  title and the Zenodo record keep that name. Doppeldwarf-306 names the corpus and the paper.
+- **The delivered explainer film still shows the old project-page address on screen**, in two
+  frames (`video/explainer/scenes.py`). Its source and receipts are left as delivered; fixing
+  it means re-rendering the film.
+- Earlier sections that say `wroclaw-dwarves` or `krasnal-id` for these addresses describe the
+  names at the time they were written.
 
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.

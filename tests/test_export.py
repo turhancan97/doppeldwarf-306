@@ -581,10 +581,10 @@ def test_push_refuses_before_reaching_the_network(tmp_path: Path) -> None:
 
 def test_the_licence_link_is_an_absolute_uri() -> None:
     """The Hub's validator rejects a repository-relative link outright."""
-    resolved = license_link_uri("turhancan97/wroclaw-dwarves", "LICENSES.md")
+    resolved = license_link_uri("turhancan97/doppeldwarf-306", "LICENSES.md")
 
     assert resolved == (
-        "https://huggingface.co/datasets/turhancan97/wroclaw-dwarves/blob/main/LICENSES.md"
+        "https://huggingface.co/datasets/turhancan97/doppeldwarf-306/blob/main/LICENSES.md"
     )
     # An absolute link is left alone.
     assert license_link_uri("a/b", "https://example.org/x") == "https://example.org/x"
