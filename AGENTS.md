@@ -771,7 +771,8 @@ already on screen rather than asking for it again.
   paper abstract, with every number macro resolved from its generated TeX fragments and intervals
   written as “lo to hi”. Key-result text uses `RESULTS.md` or those same macros. Since 2026-11-19 the
   abstract leads with DINOv2's own numbers and states the unseen-photographer result as absolute
-  accuracies (81.8% rising to as much as 85.5%), not as gains; the paired gains of 2.5 and 3.6
+  accuracies (81.8% to 85.5% with learned matching), not as gains, and gives rejection for
+  DINOv2 (38.3% to 19.6% false acceptance at 90% known acceptance); the paired gains of 2.5 and 3.6
   points are in the verification card, and endpoint accuracies are independently rounded and must
   not be used to re-derive them. Dataset counts and licence families trace
   to §12.1 and §5.11, and the depicted-work disclosure and removal path follow `export/card.py`.
