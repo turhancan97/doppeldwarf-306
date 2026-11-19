@@ -29,6 +29,8 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ### Fixed
 
+- The corpus figure's map legend overlapped statue positions and the inset's leader line. It now
+  sits above the map.
 - The backbone-comparison figure is redesigned to be read without its caption, in the paper and
   on the project page: each panel is titled above its plot (the letters had sat over the gaps
   between panels), right is better in every panel with the photographer effect on a reversed

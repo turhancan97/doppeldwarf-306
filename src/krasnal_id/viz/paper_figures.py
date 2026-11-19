@@ -539,11 +539,16 @@ def _placement_panel(panel: Any, sources: Sources, manifest: DatasetManifest) ->
                 label=f"photo positions ({int((~from_wikidata).sum())})",
             ),
         ],
+        # Above the map, not inside it: every corner of the plot holds statues, the
+        # inset or the radius caption, and a legend in the lower right sat on points
+        # and on the inset's leader line.
         loc="lower right",
+        bbox_to_anchor=(1.0, 1.01),
         fontsize=style.SIZE_ANNOTATION,
         frameon=False,
         handletextpad=0.2,
-        borderaxespad=0.1,
+        borderaxespad=0.0,
+        labelspacing=0.25,
     )
     axes.set_aspect("equal")
     axes.set_xlabel("km east of the corpus centre")
