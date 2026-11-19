@@ -180,14 +180,19 @@ def apply(plt: Any) -> None:
     plt.rcParams.update(rc_parameters())
 
 
-def panel_tag(axes: Any, letter: str) -> None:
-    """Put a bold (a)-style tag at the top left of one panel, outside the plot area."""
+def panel_tag(axes: Any, letter: str, centred: bool = False) -> None:
+    """Put a bold (a)-style tag above one panel: at its top left, or centred over it.
+
+    The top-left tag hangs in the margin a y-axis leaves. A panel with no y-axis of its
+    own has no such margin, so there the tag would sit over the gap to its neighbour and
+    read as belonging to neither; `centred` sets it over the middle of the plot instead.
+    """
     axes.text(
-        -0.02,
+        0.5 if centred else -0.02,
         1.04,
         f"({letter})",
         transform=axes.transAxes,
-        ha="right",
+        ha="center" if centred else "right",
         va="bottom",
         fontsize=SIZE_PANEL,
         fontweight="bold",

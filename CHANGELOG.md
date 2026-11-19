@@ -29,6 +29,8 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ### Fixed
 
+- The backbone-comparison figure's panel letters sat over the gaps between panels. They are now
+  centred above each panel, in the paper's figure and its copy on the project page.
 - The project page's teaser described three groups of pillar dwarves as single statues. Its
   caption and image description now say each is a group of several figures, and that the
   winning photograph shows a different figure of the query's own group.

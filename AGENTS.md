@@ -2856,6 +2856,16 @@ are such installations. Found by looking at the source photographs, not from any
 **describe a class as "a statue or fixed installation", never as one physical object**, and
 check what a figure's photographs show before a caption calls two of them the same statue.
 
+### 11.7 Panel letters on the backbone figure (2026-11-19)
+
+The thirteen-backbone forest plot's panels have no y-axis of their own, so the shared top-left
+panel tag (§7.14) hung over the gap between two panels and read as belonging to neither.
+`style.panel_tag(..., centred=True)` now sets the letter over the middle of each of those
+panels; every other figure keeps the top-left tag. The figure was regenerated with `visualize
+family` and re-copied to `docs/figures/paper-family.png` (§6.7); the generated numbers and the
+supplement's curves came out byte-identical. With the gap no longer reserved for the letters the
+panels are slightly wider, so the automatic tick positions changed; the data did not.
+
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.
 - Keep `CHANGELOG.md` current throughout implementation. Every material addition, change, fix, removal, or documentation milestone must be recorded under an `Unreleased` section as part of the same change.

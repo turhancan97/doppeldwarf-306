@@ -214,7 +214,7 @@ def render_family_figure(
             )
         axes.set_xlabel(panel.label, fontsize=style.SIZE_LABEL, color=style.INK_SECONDARY)
         axes.xaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: style.minus(f"{v:g}")))
-        style.panel_tag(axes, "abcdefgh"[column - 1])
+        style.panel_tag(axes, "abcdefgh"[column - 1], centred=True)
     written = style.save(figure, path, dpi)
     plt.close(figure)
     return written

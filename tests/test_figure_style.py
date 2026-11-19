@@ -80,3 +80,18 @@ def test_save_keeps_the_drawn_size(tmp_path: Path) -> None:
         # No tight bounding box: the file is the size it was drawn at (matplotlib
         # truncates the pixel count rather than rounding it).
         assert image.size == (int(style.CVWW.column * 100), 200)
+
+
+def test_a_centred_panel_tag_sits_over_the_middle_of_its_panel() -> None:
+    matplotlib = pytest.importorskip("matplotlib")
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    style.apply(plt)
+    figure, (left, right) = plt.subplots(1, 2, figsize=(2 * style.CVWW.column, 2.0))
+    style.panel_tag(left, "a")
+    style.panel_tag(right, "b", centred=True)
+    margin, centred = left.texts[0], right.texts[0]
+    plt.close(figure)
+    assert (margin.get_position()[0], margin.get_horizontalalignment()) == (-0.02, "right")
+    assert (centred.get_position()[0], centred.get_horizontalalignment()) == (0.5, "center")
