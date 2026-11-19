@@ -173,7 +173,8 @@ backbone choice is most of the battle; if you can, it matters much less.
 
 ### What this implies at city scale
 
-Extrapolating to the **roughly 1,040** dwarves standing in public space in 2026 gives **91.7%**
+Extrapolating to an assumed pool of **1,040** dwarves, an unofficial count for public space in
+2026 (see below), gives **91.7%**
 top-1 for DINOv2 and **79.3%** for CLIP. The DINOv2 figure is a reasonably supported extrapolation
 rather than a guess: it is under two doublings past measured data, over a range where the rate has
 been constant for seven doublings. **The CLIP figure remains an optimistic bound**, because its
@@ -181,15 +182,16 @@ rate is still worsening at the edge of the measured range — 2.53 points per do
 decade against 2.06 fitted overall — so a log-linear fit understates the loss.
 
 **The count is the unstable half of that sentence, not the rate.** There is no agreed number of
-dwarves: the city's own tourism portal still carries about 360 for 2020, the thousandth statue was
-installed in September 2025, the same portal gives about 1,040 in public space for 2026, and
-counts reach about 1,425 once works outside the city, temporary installations and related art
-projects are counted. An earlier version of this section said "roughly 1,400" and that figure
-traced to no source. Fortunately the projection barely depends on it: 91.8% at 1,000 candidates,
+dwarves. The only count verified at its source is the city tourism portal's about 360 for 2020
+([visitWroclaw](https://visitwroclaw.eu/ile-krasnali-jest-we-wroclawiu/)). Larger figures
+circulate without a source this project could verify: a thousandth statue in September 2025, about
+1,040 in public space in 2026, and about 1,425 once works outside the city, temporary
+installations and related art projects are counted. An earlier version of this section said
+"roughly 1,400", which traced to no source, and a later one attributed 1,040 to the portal, whose
+pages do not state it (checked 19 November 2026). Fortunately the projection barely depends on it: 91.8% at 1,000 candidates,
 91.7% at 1,040 and 91.4% at 1,425, so **the whole range of published counts spans 0.4 points** —
-narrower than the confidence interval on the measured 306-class figure. The number quoted above is
-the 2026 public-space count, [visitWroclaw](https://visitwroclaw.eu/wroclawskie-krasnale),
-accessed 14 September 2026.
+narrower than the confidence interval on the measured 306-class figure. The 1,040 used above is
+therefore an assumed pool size, not a cited count.
 
 ## 3. Does narrowing by location actually help?
 

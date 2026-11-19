@@ -27,6 +27,11 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
   93.48% against 88.24%, which is 5.2. It also carried "131" cross-label duplicate files, which
   traces to no artifact: `data/discovery/fetch-audit.json` records 36 files (87 copies under 24
   labels). Both are corrected, with the one matching mention in `AGENTS.md`.
+- `RESULTS.md` attributed a count of about 1,040 statues in public space to the city tourism
+  portal, whose pages do not state it; only its "about 360" for 2020 could be verified. The
+  1,040 is now described as an assumed pool size, the larger counts as unverified, and
+  `video/explainer/claims.json` re-pins the `RESULTS.md` hash. The projected accuracies are
+  unchanged.
 - `video/explainer/claims.json` re-pins the `RESULTS.md` hash after that correction. The pool-size
   table the explainer's guard parses is unchanged; the delivered film's receipt keeps the hash it
   was built from.
