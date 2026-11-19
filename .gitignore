@@ -50,8 +50,8 @@ multirun/
 # Build-time dependencies for the static demo.
 docs/demo/node_modules/
 
-# The manuscript. Deliberately untracked: the paper is drafted outside this
-# repository's history, and the Springer Nature template it vendors is not ours
-# to redistribute. Back it up separately -- nothing here protects it.
-paper/
+# The manuscript and its generated public preprint. Deliberately untracked: the
+# paper is drafted outside this repository's history. Back it up separately --
+# nothing here protects it.
 paper-cvww/
+paper-arxiv/

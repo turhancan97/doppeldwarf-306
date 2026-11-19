@@ -12,6 +12,10 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ### Changed
 
+- The journal route is dropped: the shorter paper is the only paper. `AGENTS.md` §11.4 records
+  the decision, the removal of the untracked journal folder, the build tool's new location and
+  how the public preprint is generated; `.gitignore` covers the preprint folder instead of the
+  removed one. No result, figure or published page changes.
 - The project page's abstract follows the paper's rewritten one: a softer opening, DINOv2's leave-one-out accuracy first, the unseen-photographer result as absolute accuracies, the backbone comparison in one clause, and rejection stated for DINOv2 at its operating point. Its geography sentence says location narrowing helps, but less than an equal random pool.
 - The project page qualifies the pretraining and geographic comparisons and distinguishes known-query acceptance from correct identification. Its verification card now shows held-out accuracy and paired statue-bootstrap gain intervals from the stored results.
 - Wide project-page figures scroll independently on mobile and have explicit full-size links. Publication plots use larger labels; the backbone comparison reserves more space for model names and rows.
