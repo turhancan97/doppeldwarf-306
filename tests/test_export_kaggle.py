@@ -95,7 +95,7 @@ def test_the_packaged_ids_are_the_right_accounts_on_each_platform() -> None:
     # The Kaggle account is not the Hugging Face one, so a single configured id
     # would send one of the two exports to an account that does not exist.
     assert export.kaggle_id == "turhancankargin/wroclaw-dwarves"
-    assert export.repo_id == "turhancan97/wroclaw-dwarves"
+    assert export.repo_id == "turhancan97/doppeldwarf-306"
     assert validate_dataset_id(export.kaggle_id) == ("turhancankargin", "wroclaw-dwarves")
 
 

@@ -248,7 +248,7 @@ def _front_matter(
     import yaml
 
     payload: dict[str, object] = {
-        "pretty_name": "Wrocław Dwarves — Fine-Grained Instance Retrieval",
+        "pretty_name": "Doppeldwarf-306 — Fine-Grained Instance Retrieval",
         "license": "other",
         "license_name": license_name,
         "license_link": license_link_uri(repo_id, license_link),
@@ -339,7 +339,7 @@ def render_card(
     return f"""---
 {_front_matter(facts, configs, features, license_name, license_link, repo_id)}---
 
-# Wrocław Dwarves — Fine-Grained Instance Retrieval
+# Doppeldwarf-306 — Fine-Grained Instance Retrieval
 
 Wrocław is scattered with several hundred small bronze dwarf statues — *krasnale* — installed
 across the city since 2001. They are individually sculpted, but they share a visual vocabulary:
@@ -361,7 +361,7 @@ grows, and whether narrowing that pool by location — as a phone app would — 
 does not: proximity-based pools are consistently *harder* than random pools of the same size,
 because sculptors install related pieces near each other, so a small radius selects for a
 statue's own lookalikes. The full method and every result artifact are in the
-[source repository](https://github.com/turhancan97/krasnal-id).
+[source repository](https://github.com/turhancan97/doppeldwarf-306).
 
 ## Task and protocol
 

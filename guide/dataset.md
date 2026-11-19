@@ -2,13 +2,13 @@
 
 [Back to the README](../README.md) · [All guides](README.md)
 
-Doppeldwarf-306 is published on Hugging Face as `turhancan97/wroclaw-dwarves` and on Kaggle as `turhancankargin/wroclaw-dwarves`.
+Doppeldwarf-306 is published on Hugging Face as `turhancan97/doppeldwarf-306` and on Kaggle as `turhancankargin/wroclaw-dwarves`.
 
 ## Use the published dataset
 
 The dataset is published twice, so you do not need this repository, a Commons crawl or a GPU to
 work with it. On the Hub as
-[turhancan97/wroclaw-dwarves](https://huggingface.co/datasets/turhancan97/wroclaw-dwarves), in
+[turhancan97/doppeldwarf-306](https://huggingface.co/datasets/turhancan97/doppeldwarf-306), in
 parquet with the images embedded and one config per piece, so a comparison of the two backbones
 costs about 8 MB rather than the full 676 MB. On
 [Kaggle](https://www.kaggle.com/datasets/turhancankargin/wroclaw-dwarves) as images on disk
@@ -19,9 +19,9 @@ twenty lines. The Hub copy is the one this section shows:
 ```python
 from datasets import load_dataset
 
-images = load_dataset("turhancan97/wroclaw-dwarves", "default", split="reference")
-vectors = load_dataset("turhancan97/wroclaw-dwarves", "embeddings_dinov2", split="reference")
-folds = load_dataset("turhancan97/wroclaw-dwarves", "leave_one_out", split="test")
+images = load_dataset("turhancan97/doppeldwarf-306", "default", split="reference")
+vectors = load_dataset("turhancan97/doppeldwarf-306", "embeddings_dinov2", split="reference")
+folds = load_dataset("turhancan97/doppeldwarf-306", "leave_one_out", split="test")
 ```
 
 Six configs are published: `default` (the photographs and their attribution), `metadata` (the same

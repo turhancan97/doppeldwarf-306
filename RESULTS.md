@@ -11,7 +11,7 @@ asking properly:
 > become a reliable way to identify a statue?
 
 This repository answers that with a measured curve rather than a single accuracy number. You can
-also [try it on a photograph](https://turhancan97.github.io/krasnal-id/demo.html), which runs the model in
+also [try it on a photograph](https://turhancan97.github.io/doppeldwarf-306/demo.html), which runs the model in
 your own browser.
 
 ## Summary of findings
@@ -1104,7 +1104,7 @@ statue, so average precision equals reciprocal rank and MRR is the mAP.
 ## Reproducing this
 
 The photographs, both backbones' embeddings and the evaluation folds are published at
-[turhancan97/wroclaw-dwarves](https://huggingface.co/datasets/turhancan97/wroclaw-dwarves)
+[turhancan97/doppeldwarf-306](https://huggingface.co/datasets/turhancan97/doppeldwarf-306)
 and on [Kaggle](https://www.kaggle.com/datasets/turhancankargin/wroclaw-dwarves), so the
 baselines can be re-derived without re-crawling Commons: load the `embeddings_dinov2` and
 `leave_one_out` configs and score them. The pipeline below is what produced them.

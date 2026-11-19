@@ -12,6 +12,13 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ### Changed
 
+- The repository is now `turhancan97/doppeldwarf-306` and the Hugging Face dataset
+  `turhancan97/doppeldwarf-306`; the project page moved to
+  `turhancan97.github.io/doppeldwarf-306/`. Every link in the README, guides, results record,
+  site, citation metadata, export configuration and dataset cards follows. The dataset titles
+  read "Doppeldwarf-306"; Kaggle keeps its `wroclaw-dwarves` address, which cannot change. The
+  software keeps the name Krasnal-ID. `video/explainer/claims.json` re-pins the `RESULTS.md`
+  hash; only two links changed there.
 - The journal route is dropped: the shorter paper is the only paper. `AGENTS.md` §11.4 records
   the decision, the removal of the untracked journal folder, the build tool's new location and
   how the public preprint is generated; `.gitignore` covers the preprint folder instead of the
