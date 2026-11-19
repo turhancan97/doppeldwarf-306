@@ -29,6 +29,9 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ### Fixed
 
+- The project page's teaser described three groups of pillar dwarves as single statues. Its
+  caption and image description now say each is a group of several figures, and that the
+  winning photograph shows a different figure of the query's own group.
 - The identifier describes coordinate-based proximity clusters without claiming that their members form one themed installation or cannot be distinguished by location.
 - The geography figure's "(a)" tag overprinted its legend once the plot type grew. The legend is
   now anchored at the panel's left edge, clear of the tag.

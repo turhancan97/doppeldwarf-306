@@ -2846,6 +2846,16 @@ request, so the public names match the paper's name for the corpus.
 - Earlier sections that say `wroclaw-dwarves` or `krasnal-id` for these addresses describe the
   names at the time they were written.
 
+### 11.6 A class may be a fixed installation (2026-11-19)
+
+**The three Słupniki are groups, not single dwarves, and the paper and site now say so.** Each
+is several separate figures on lamp posts in one street, kept as one class under §5.5. In the
+teaser the query and its correct best match are two different figures of the Solne group, which
+the caption states. 46 of the 306 classes come from Commons categories titled in the plural and
+are such installations. Found by looking at the source photographs, not from any artifact:
+**describe a class as "a statue or fixed installation", never as one physical object**, and
+check what a figure's photographs show before a caption calls two of them the same statue.
+
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.
 - Keep `CHANGELOG.md` current throughout implementation. Every material addition, change, fix, removal, or documentation milestone must be recorded under an `Unreleased` section as part of the same change.
