@@ -2324,8 +2324,8 @@ a multi-region baseline. It also makes the field-query path walk-ready (§5.14).
     its own photographer is withheld, which is the regime this arm runs in.
 
 - **A shorter archival manuscript takes priority** — decided by the author on 2026-11-05;
-  see §11.3. The *Scientific Reports* plan of §11.1 and its APC investigation in §11.2 remain as a fallback
-  and historical record; journal submission and APC funding are no longer the next step.
+  see §11.3. **The journal route was dropped on 2026-11-19** (§11.4): the *Scientific Reports*
+  plan of §11.1 and its APC investigation in §11.2 remain as a historical record only.
 
 Any of these is a scope change. Record the decision here before implementing it.
 
@@ -2479,8 +2479,9 @@ krasnal-id/
 
 ### 11.1 Publication plan decision (2026-09-12)
 
-**Historical journal plan.** Section 11.3 supersedes this as the first submission priority on
-2026-11-05. Preserve the manuscript decisions below when preparing the shorter version.
+**Historical journal plan, dropped on 2026-11-19 (§11.4).** Section 11.3 superseded this as the
+first submission priority on 2026-11-05. The journal draft and its `paper/` folder no longer
+exist; what follows records the reasoning and the lessons, which still apply to the shorter paper.
 
 **One paper, to *Scientific Reports*: the dataset and the analysis together.** The first plan here
 was two papers, a Data Descriptor for the corpus and an analysis paper for the findings. It was
@@ -2704,7 +2705,7 @@ that would bring it back.
 
 ### 11.2 Article-processing charge (2026-09-14)
 
-This investigation applies only if the journal route is resumed; §11.3 now takes priority.
+This investigation applied only to the journal route, which was dropped on 2026-11-19 (§11.4).
 
 **Assume the APC is payable and budget for it.** This is the one open item on the paper that is not
 about the paper, and what can be checked without logging in looks unfavourable.
@@ -2737,8 +2738,9 @@ about the paper, and what can be checked without logging in looks unfavourable.
 ### 11.3 Paper drafting (2026-11-05)
 
 **The paper is now drafted as a shorter, archival conference-style manuscript, ahead of the earlier
-journal-first plan.** The author made this choice explicitly. *Scientific Reports* remains a
-fallback, with §11.1 and §11.2 retained as the record of that earlier route. **This public
+journal-first plan.** The author made this choice explicitly. *Scientific Reports* was kept as a
+fallback until 2026-11-19, when the journal route was dropped (§11.4); §11.1 and §11.2 are
+retained as the record of that earlier route. **This public
 repository does not name where the paper is submitted**; the venue, its dates and its rules are
 kept in the untracked `paper-cvww/VENUE-NOTES.md`.
 
@@ -2753,7 +2755,8 @@ kept in the untracked `paper-cvww/VENUE-NOTES.md`.
   lower bound. New runs (§7.12) had a hard cut-off of 1 December 2026; after it the paper goes in
   with what exists.
 - **The draft is in untracked `paper-cvww/`, built from its venue's official author kit**, an
-  unmodified copy of which is kept in `paper-cvww/_kit/`. It builds with `paper/bin/tectonic`.
+  unmodified copy of which is kept in `paper-cvww/_kit/`. It builds with `paper-cvww/bin/tectonic`
+  (moved there from `paper/bin/` when the journal folder was removed, §11.4).
   Review is double-blind, so the corpus is called "ours" and never by the project name, and the
   manuscript neither names nor links this repository or the published datasets. On 2026-11-09 the
   organisers confirmed that an arXiv preprint, and this repository and the datasets staying
@@ -2796,6 +2799,29 @@ kept in the untracked `paper-cvww/VENUE-NOTES.md`.
   The same read found `sivic2003videogoogle` without first names, three arXiv-only entries for
   papers published at ICLR, NeurIPS and TMLR, and The Met without its NeurIPS venue — and that
   `ieeenat_fullname` lowercases titles, so every title is braced in the new manuscript's copy.
+
+### 11.4 Journal route dropped; public preprint (2026-11-19)
+
+**There will be no journal submission.** The author decided on 2026-11-19 that the shorter paper
+of §11.3 is the only paper. This replaces "fallback" wherever §8, §11.1, §11.2 and §11.3 used it.
+
+- **The untracked `paper/` folder was deleted**, after being archived to the paper-backups
+  directory §12.1 names. Mentions of `paper/` elsewhere in this file describe what existed when
+  they were written. The build tool it held is now `paper-cvww/bin/tectonic`.
+- **`visualize paper-figures --layout journal` and `visualize paper-tables` stay in the code.**
+  The supplement's generated tables come from `paper-tables`, and the journal layout is tested;
+  their default output paths still say `paper/figures` and `paper/tables`, so pass `--output-dir`.
+- **A public preprint is generated, never edited by hand.** `paper-arxiv/build.sh` (untracked,
+  like the manuscript) assembles a source package from `paper-cvww/`: the author named, the code
+  and data linked, the supplement set as an appendix of the same PDF, the resolved bibliography
+  read directly, and a neutral style in place of the venue's. Re-run it after any change to the
+  manuscript.
+- **The preprint's source must not name the venue.** A preprint server publishes the TeX source,
+  comments included, so the build strips every comment and fails if a venue or anonymity string
+  remains. §11.3's rule that this repository does not say where the paper is submitted applies to
+  the preprint for the same reason.
+- **The package needs XeLaTeX**, because the fonts are loaded by file name through `fontspec`
+  (§7.13). Only the local XeTeX-based build was tested; check the server's own PDF after upload.
 
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.
