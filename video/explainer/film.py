@@ -61,7 +61,7 @@ def captions_and_pages():
         "This transcript matches the approved narration. Research location findings are "
         "simulations; the browser identifier reports its own measured accuracy.</p>"
         + "".join(sections)
-        + '<p><a href="https://github.com/turhancan97/krasnal-id/blob/main/RESULTS.md">'
+        + '<p><a href="https://github.com/turhancan97/doppeldwarf-306/blob/main/RESULTS.md">'
         "Research results and methods</a> · "
         '<a href="explainer-credits.html">Photograph and narration credits</a></p>'
     )
@@ -90,9 +90,9 @@ def captions_and_pages():
         "Original animation code is MIT; this does not replace the photographs&#8217; terms.</p>"
         + f"<h2>Depicted sculptures</h2><p>{esc(credits['depicted_works'])}</p>"
         + "<p>Removal requests follow the dataset&#8217;s "
-        '<a href="https://github.com/turhancan97/krasnal-id/blob/main/data/image-review.json">'
+        '<a href="https://github.com/turhancan97/doppeldwarf-306/blob/main/data/image-review.json">'
         "image-review record</a>; "
-        '<a href="https://github.com/turhancan97/krasnal-id/issues">open an issue</a>.</p>'
+        '<a href="https://github.com/turhancan97/doppeldwarf-306/issues">open an issue</a>.</p>'
         + '<p><a href="explainer-credits.json">Machine-readable credits</a> · '
         '<a href="explainer.mp4" download>Download the video</a></p>'
     )
