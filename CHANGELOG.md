@@ -10,6 +10,10 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ## [Unreleased]
 
+### Removed
+
+- The institutional affiliation line under the author's name on the project page.
+
 ### Added
 
 - An email address for removal requests on the project page and in both dataset descriptions,
