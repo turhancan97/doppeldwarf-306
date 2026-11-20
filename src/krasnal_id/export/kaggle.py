@@ -460,7 +460,7 @@ def render_description(facts: card_module.CardFacts, dataset_id: str, images: bo
         "photographs only. They grant no rights in the sculptures depicted. A removal request "
         "for any photograph is honoured through the project's `data/image-review.json`: one "
         "exclusion entry, a rebuild, a new version of this dataset. Send requests to "
-        "turhancan.kargin+doppeldwarf306@gmail.com; no account or legal argument is needed.",
+        "turhancan.kargin@gmail.com; no account or legal argument is needed.",
         "",
         "## Identifiers are dataset-local",
         "",

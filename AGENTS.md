@@ -2896,15 +2896,15 @@ safe as that corner is empty, so look at the render.
 
 ### 11.9 A contact address for removal requests (2026-11-20)
 
-**Every public page now gives an email address for removal requests: `turhancan.kargin+doppeldwarf306@gmail.com`.**
+**Every public page now gives an email address for removal requests: `turhancan.kargin@gmail.com`.**
 §5.11 chose a named removal mechanism over a bare "contact us", and that stands; this adds the
 missing way to *reach* it. The Hugging Face card asked for a Hub discussion and the project page
 for a GitHub issue, both of which need an account and are public, and the Kaggle description
 named no route at all. A sculptor, a rights-holder's lawyer or a person in a photograph is
 unlikely to have either account.
 
-- The address is the author's own, in Gmail's tagged form, so requests can be filtered and a
-  scraped tag can be blocked without touching the base address. The author chose it.
+- The address is the author's own plain one, chosen by the author over a tagged `+` form: it
+  is the form a sculptor or a lawyer writing a first email will recognise and trust.
 - It appears beside the existing routes, never instead of them, on the project page, in
   `export/card.py` and in `export/kaggle.py`. The Hub card was updated directly; the Kaggle
   description is edited by the author, since no Kaggle credential exists here (§5.13).
