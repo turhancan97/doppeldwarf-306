@@ -2911,6 +2911,14 @@ unlikely to have either account.
 - Kaggle's description must stay free of angle brackets (§5.13), so the address is plain text
   there, not a link.
 
+### 11.10 No institutional affiliation on public pages (2026-11-20)
+
+**The project page and the public preprint carry the author's name only.** The author decided
+this on 2026-11-20: the work is a personal side project. The project page's affiliation line
+and its unused style rule are removed, the preprint's author block gives a name, a personal
+email address and the project page, and §6.7's rule that `CITATION.cff` is not extended with an
+affiliation stands. Do not add one to a page, a dataset card or the citation metadata.
+
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.
 - Keep `CHANGELOG.md` current throughout implementation. Every material addition, change, fix, removal, or documentation milestone must be recorded under an `Unreleased` section as part of the same change.

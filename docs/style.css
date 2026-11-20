@@ -278,7 +278,6 @@ footer .repo{font-family:"IBM Plex Mono",monospace; font-size:.81rem}
 .project-page .publication-title{max-width:55rem; margin:0 auto 1.5rem;
   font-size:clamp(2rem,4.5vw,3.2rem); line-height:1.12; text-wrap:balance}
 .publication-authors{font-size:1.25rem; font-weight:500; margin-bottom:.25rem}
-.publication-affiliation{color:var(--ink-2); font-size:1rem}
 .publication-links.buttons{gap:.65rem; margin:1.8rem 0 0}
 .project-page .button{font:inherit; font-size:.9rem; height:auto; min-height:2.65rem;
   padding:.55rem 1.1rem; text-decoration:none; color:var(--ink); background:var(--surface);
