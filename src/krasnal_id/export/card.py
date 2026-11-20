@@ -482,7 +482,8 @@ a factual disclosure rather than legal advice, and it is recorded because it is 
 question the per-file licences do not answer.
 
 **Removal requests.** If you are a sculptor, photographer, rights-holder or their representative
-and want a photograph removed, open a discussion on this repository. Requests are honoured
+and want a photograph removed, open a discussion on this repository, or write to
+turhancan.kargin+doppeldwarf306@gmail.com if you have no account. Requests are honoured
 without requiring a legal argument. Removal is implemented upstream rather than patched here: the
 file is added to the source project's tracked `data/image-review.json` exclusions, the manifest,
 folds, embeddings and credit files are regenerated, and a new revision is pushed.
