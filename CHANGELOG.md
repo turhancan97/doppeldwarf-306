@@ -10,6 +10,11 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ## [Unreleased]
 
+### Added
+
+- An email address for removal requests on the project page and in both dataset descriptions,
+  beside the existing GitHub-issue and Hub-discussion routes, so a request needs no account.
+
 ### Changed
 
 - The explainer film on the project page is re-rendered with the new addresses: its closing scene
