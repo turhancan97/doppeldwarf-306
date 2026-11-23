@@ -17,6 +17,9 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
   `.zenodo.json`, and named in both dataset-description generators.
 - The Hugging Face dataset card's citation section gives the paper's BibTeX ahead of the
   software's.
+- An arXiv badge in the README, and a white-plate link-preview card,
+  `docs/brand/doppeldwarf-social-preview-light.png`, written by the brand generator beside the
+  dark one.
 
 ### Removed
 
