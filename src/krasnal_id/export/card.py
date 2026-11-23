@@ -532,7 +532,22 @@ the pinned backbone revisions and the digest of every published file.
 
 ## Citation
 
-Curated by [{DATASET_AUTHOR}]({DATASET_AUTHOR_ORCID}).
+Curated by [{DATASET_AUTHOR}]({DATASET_AUTHOR_ORCID}). Cite the paper:
+
+```bibtex
+@misc{{kargin2026doppeldwarf,
+  author        = {{{DATASET_AUTHOR_BIBTEX}}},
+  title         = {{Which Dwarf Is This? Doppeldwarf-306 and
+                   Near-Identical Instance Retrieval}},
+  year          = {{2026}},
+  eprint        = {{2611.27490}},
+  archivePrefix = {{arXiv}},
+  primaryClass  = {{cs.CV}},
+  url           = {{https://arxiv.org/abs/2611.27490}}
+}}
+```
+
+and, for the code and this dataset's build pipeline, the software archive:
 
 ```bibtex
 @software{{kargin2026krasnalid,

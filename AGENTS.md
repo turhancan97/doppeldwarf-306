@@ -2932,6 +2932,7 @@ is available" is therefore discharged:
   describes the software. `.zenodo.json` lists the preprint as a related identifier.
 - `export/card.py` and `export/kaggle.py` name the paper, so a re-export keeps the link. The
   Hub card was updated directly; the Kaggle description is the author's to edit (§5.13).
+  The card's citation section gives the paper's BibTeX first and the software's second.
 - **The preprint does not say where the paper is under review, and nothing here may** (§11.3).
 - The preprint's licence is CC BY 4.0 while most reproduced photographs are CC BY-SA. Its
   appendix states that the photographs keep their photographers' licences and that the paper
