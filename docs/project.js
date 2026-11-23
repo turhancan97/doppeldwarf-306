@@ -18,7 +18,7 @@ copyButton.addEventListener("click", async () => {
     const field = document.createElement("textarea");
     field.value = citation;
     field.setAttribute("readonly", "");
-    field.setAttribute("aria-label", "Software citation");
+    field.setAttribute("aria-label", "Paper citation");
     field.style.position = "fixed";
     field.style.opacity = "0";
     document.body.append(field);

@@ -39,6 +39,11 @@
       "identifier": "https://turhancan97.github.io/doppeldwarf-306/",
       "relation": "isDocumentedBy",
       "resource_type": "other"
+    },
+    {
+      "identifier": "arXiv:2611.27490",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
     }
   ],
   "notes": "The MIT License applies to the original source code. Thumbnail images included under docs/assets/ are derived from Wikimedia Commons and remain under their individual Public Domain, CC0, CC BY and CC BY-SA terms; see docs/assets/references.json for per-image attribution."

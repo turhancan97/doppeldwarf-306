@@ -470,6 +470,7 @@ def render_description(facts: card_module.CardFacts, dataset_id: str, images: bo
         "",
         "## Source",
         "",
+        "Paper: https://arxiv.org/abs/2611.27490 . "
         f"Code, method and full results: https://github.com/turhancan97/doppeldwarf-306 — "
         f"DOI {card_module.PROJECT_DOI}. The same corpus is published on Hugging Face as "
         "`turhancan97/doppeldwarf-306`, in parquet with the images embedded.",

@@ -2919,6 +2919,25 @@ and its unused style rule are removed, the preprint's author block gives a name,
 email address and the project page, and §6.7's rule that `CITATION.cff` is not extended with an
 affiliation stands. Do not add one to a page, a dataset card or the citation metadata.
 
+### 11.11 The paper is public as a preprint (2026-11-23)
+
+**arXiv:2611.27490**, posted 20 November 2026 in cs.CV with a cross-list to cs.IR, under CC BY 4.0,
+with the author's name only (§11.10). §6.7's "the paper link stays disabled until a public paper
+is available" is therefore discharged:
+
+- The project page's first button links the preprint, and its BibTeX block cites the paper;
+  the software's Zenodo DOI is named beside it. The copy button copies the paper's entry.
+- `README.md` links the preprint and gives its BibTeX ahead of the software's.
+- `CITATION.cff` gains a `preferred-citation` for the paper; its top-level entry still
+  describes the software. `.zenodo.json` lists the preprint as a related identifier.
+- `export/card.py` and `export/kaggle.py` name the paper, so a re-export keeps the link. The
+  Hub card was updated directly; the Kaggle description is the author's to edit (§5.13).
+- **The preprint does not say where the paper is under review, and nothing here may** (§11.3).
+- The preprint's licence is CC BY 4.0 while most reproduced photographs are CC BY-SA. Its
+  appendix states that the photographs keep their photographers' licences and that the paper
+  relicenses none of them, which is what makes that combination correct. Keep that statement in
+  any later version.
+
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.
 - Keep `CHANGELOG.md` current throughout implementation. Every material addition, change, fix, removal, or documentation milestone must be recorded under an `Unreleased` section as part of the same change.

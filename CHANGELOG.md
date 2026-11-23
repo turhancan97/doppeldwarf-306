@@ -10,6 +10,12 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 
 ## [Unreleased]
 
+### Added
+
+- The paper's preprint, arXiv:2611.27490: linked from the project page's first button and the README,
+  cited by the page's BibTeX block and by a `preferred-citation` in `CITATION.cff`, listed in
+  `.zenodo.json`, and named in both dataset-description generators.
+
 ### Removed
 
 - The institutional affiliation line under the author's name on the project page.

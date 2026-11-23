@@ -360,8 +360,9 @@ The question it was built to answer is how identification accuracy decays as the
 grows, and whether narrowing that pool by location — as a phone app would — actually helps. It
 does not: proximity-based pools are consistently *harder* than random pools of the same size,
 because sculptors install related pieces near each other, so a small radius selects for a
-statue's own lookalikes. The full method and every result artifact are in the
-[source repository](https://github.com/turhancan97/doppeldwarf-306).
+statue's own lookalikes. The paper is
+[arXiv:2611.27490](https://arxiv.org/abs/2611.27490); the full method and every result
+artifact are in the [source repository](https://github.com/turhancan97/doppeldwarf-306).
 
 ## Task and protocol
 
