@@ -3,6 +3,7 @@
   <img src="docs/brand/doppeldwarf-lockup-horizontal-light.svg" alt="Doppeldwarf-306: near-identical instance retrieval" width="380">
 </picture>
 
+[![arXiv](https://img.shields.io/badge/arXiv-2611.27490-b31b1b.svg)](https://arxiv.org/abs/2611.27490)
 [![DOI](https://zenodo.org/badge/1339843718.svg)](https://doi.org/10.5281/zenodo.22548023)
 [![CI](https://github.com/turhancan97/doppeldwarf-306/actions/workflows/ci.yml/badge.svg)](https://github.com/turhancan97/doppeldwarf-306/actions/workflows/ci.yml)
 [![Code licence: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)

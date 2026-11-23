@@ -14,6 +14,7 @@ which is what the dataset is about. Drawn in the corpus colours every figure use
 | `doppeldwarf-lockup-horizontal-light.svg` / `-dark.svg` | Name and tagline to the right of the mark: README, headers, slides. |
 | `doppeldwarf-lockup-stacked-light.svg` / `-dark.svg` | Name and tagline below the mark: square spaces, title cards. |
 | `doppeldwarf-social-preview.png` | 1280×640 card on a dark plate, for link previews and the GitHub social preview (Settings → Social preview). |
+| `doppeldwarf-social-preview-light.png` | The same card on a white plate, for light pages and slides. |
 
 | Role | Light | Dark |
 |---|---|---|

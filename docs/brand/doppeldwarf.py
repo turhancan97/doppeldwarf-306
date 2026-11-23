@@ -51,7 +51,11 @@ THEMES = {
         "tag": "#8C959F",
     },
 }
-PLATE = "#12181C"  # the dark plate behind the social preview
+# The social preview's plates: file-name suffix, lockup theme and background colour.
+PLATES = (
+    ("", "dark", "#12181C"),
+    ("-light", "light", "#FFFFFF"),
+)
 
 # One gnome on a 48-unit grid: beard first, so the brim and nose sit on top of it.
 SHAPES = (
@@ -194,14 +198,16 @@ def stacked(theme: dict[str, str]) -> str:
     return svg(width, MARK_H + 52, art + name + tag, NAME)
 
 
-def social_preview(width: int = 1280, height: int = 640) -> None:
-    """The stacked dark lockup centred on the dark plate, for link previews."""
+def social_preview(
+    suffix: str, theme: str, plate: str, width: int = 1280, height: int = 640
+) -> None:
+    """The stacked lockup of `theme` centred on a `plate`-coloured card, for link previews."""
     try:
         import cairosvg
     except ImportError:
-        print("  doppeldwarf-social-preview.png  skipped (install cairosvg)")
+        print(f"  doppeldwarf-social-preview{suffix}.png  skipped (install cairosvg)")
         return
-    lockup = stacked(THEMES["dark"])
+    lockup = stacked(THEMES[theme])
     box = lockup.split('viewBox="')[1].split('"')[0].split()
     lw, lh = float(box[2]), float(box[3])
     factor = 560 / lw
@@ -210,10 +216,10 @@ def social_preview(width: int = 1280, height: int = 640) -> None:
     page = (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" '
         f'width="{width}" height="{height}"><rect width="{width}" height="{height}" '
-        f'fill="{PLATE}"/><g transform="translate({x:.2f} {y:.2f}) scale({factor:.4f})">'
+        f'fill="{plate}"/><g transform="translate({x:.2f} {y:.2f}) scale({factor:.4f})">'
         f"{art}</g></svg>"
     )
-    target = OUT / "doppeldwarf-social-preview.png"
+    target = OUT / f"doppeldwarf-social-preview{suffix}.png"
     cairosvg.svg2png(bytestring=page.encode(), write_to=str(target))
     print(f"  {target.name}  {target.stat().st_size:>6} bytes")
 
@@ -227,4 +233,5 @@ if __name__ == "__main__":
         write(f"doppeldwarf-mark-{name}.svg", svg(MARK_W, MARK_H, mark(theme), f"{NAME} mark"))
         write(f"doppeldwarf-lockup-horizontal-{name}.svg", horizontal(theme))
         write(f"doppeldwarf-lockup-stacked-{name}.svg", stacked(theme))
-    social_preview()
+    for suffix, theme, plate in PLATES:
+        social_preview(suffix, theme, plate)
