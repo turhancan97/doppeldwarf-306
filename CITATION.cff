@@ -29,3 +29,14 @@ keywords:
   - image retrieval
   - cultural heritage
   - public art
+preferred-citation:
+  type: article
+  title: "Which Dwarf Is This? Doppeldwarf-306 and Near-Identical Instance Retrieval"
+  authors:
+    - given-names: "Turhan Can"
+      family-names: "Kargın"
+      orcid: "https://orcid.org/0000-0002-6751-4773"
+  year: 2026
+  journal: "arXiv preprint arXiv:2611.27490"
+  doi: "10.48550/arXiv.2611.27490"
+  url: "https://arxiv.org/abs/2611.27490"

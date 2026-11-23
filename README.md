@@ -17,6 +17,7 @@ source, photographer and licence, with 294 statues placed on the map.
 [**Try the identifier**](https://turhancan97.github.io/doppeldwarf-306/demo.html) (runs in your browser; nothing
 is uploaded) · [**Dataset on Hugging Face**](https://huggingface.co/datasets/turhancan97/doppeldwarf-306)
 · [**Dataset on Kaggle**](https://www.kaggle.com/datasets/turhancankargin/wroclaw-dwarves) ·
+[**Paper on arXiv**](https://arxiv.org/abs/2611.27490) ·
 [**Full results**](RESULTS.md)
 
 ## Headline results
@@ -82,7 +83,22 @@ and the measuring path for real field photographs is built and waits on a day in
 
 ## Citing this work
 
-Archived on Zenodo with a DOI that always resolves to the newest release:
+The paper, [arXiv:2611.27490](https://arxiv.org/abs/2611.27490):
+
+```bibtex
+@misc{kargin2026doppeldwarf,
+  author        = {Kargın, Turhan Can},
+  title         = {Which Dwarf Is This? Doppeldwarf-306 and
+                   Near-Identical Instance Retrieval},
+  year          = {2026},
+  eprint        = {2611.27490},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2611.27490}
+}
+```
+
+The software is archived on Zenodo with a DOI that always resolves to the newest release:
 
 ```bibtex
 @software{kargin2026krasnalid,
