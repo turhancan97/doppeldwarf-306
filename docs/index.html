@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 <link rel="stylesheet" href="style.css">
 <script defer src="project.js"></script>
+<script defer src="analytics.js"></script>
 </head>
 <body class="project-page">
 <a class="skip-link" href="#abstract">Skip to abstract</a>
@@ -194,7 +195,15 @@
     <p>Page template adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
     <p>Code MIT · photographs keep their Wikimedia Commons licences</p>
     <p><a href="https://github.com/turhancan97/doppeldwarf-306/blob/main/RESULTS.md">Complete research record</a></p>
+    <p>This page counts visits with Google Analytics only if you accept. <button type="button" class="analytics-settings" id="analytics-settings">Change analytics choice</button></p>
   </div>
 </footer>
+<div class="analytics-consent" id="analytics-consent" role="region" aria-label="Analytics consent" hidden>
+  <p>May this page count your visit with Google Analytics? It sets cookies and sends usage data to Google. Nothing is sent unless you accept, and the identifier page is never tracked.</p>
+  <div class="analytics-actions">
+    <button type="button" id="analytics-decline">Decline</button>
+    <button type="button" id="analytics-accept">Accept</button>
+  </div>
+</div>
 </body>
 </html>

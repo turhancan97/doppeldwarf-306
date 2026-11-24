@@ -20,6 +20,8 @@ rather than a build-order stage, so `0.4.0` is open-set rejection.
 - An arXiv badge in the README, and a white-plate link-preview card,
   `docs/brand/doppeldwarf-social-preview-light.png`, written by the brand generator beside the
   dark one.
+- Visit counting on the project page with Google Analytics, loaded only after the visitor accepts
+  a consent banner (`docs/analytics.js`, `AGENTS.md` §11.12). The identifier page loads none of it.
 
 ### Removed
 

@@ -2939,6 +2939,25 @@ is available" is therefore discharged:
   relicenses none of them, which is what makes that combination correct. Keep that statement in
   any later version.
 
+### 11.12 Visit counting on the project page (2026-11-24)
+
+**The project page counts visits with Google Analytics, only after the visitor accepts.** The
+author asked for Google Analytics specifically, after cookieless counters were offered.
+
+- **Nothing is requested from Google before consent.** `docs/analytics.js` shows a banner on the
+  first visit and adds Google's script only on "Accept". Google Analytics sets cookies and sends
+  usage data to Google, and many visitors are in the EU, so loading it unasked is not an option.
+  Accept and Decline carry equal visual weight, the choice is kept in `localStorage`, and a footer
+  control reopens the banner. Declining after accepting clears the `_ga` cookies and sets
+  Google's own opt-out flag for the rest of the page view.
+- **Only `docs/index.html` loads it. The identifier never does.** `demo.html` asks for a
+  photograph and, optionally, a position, and its footer promises both stay in the browser
+  (§6.9). Do not add the script there without rewording that promise.
+- The measurement ID is public by design: it is in the page source of every site that uses it.
+- §6.4's rule that the local Gradio demo reports to no external service is unchanged.
+- Checked with a stubbed page in Node: no script before a choice, one after accepting, none after
+  declining, and a stored choice is honoured without the banner. It was not run in a browser.
+
 ## 12. Living documentation and handoffs
 - Treat this file as the authoritative project brief and decision record. Update it in the same change whenever implementation work introduces or changes architecture, scope, schemas, conventions, build order, or other decisions that future contributors must follow.
 - Keep `CHANGELOG.md` current throughout implementation. Every material addition, change, fix, removal, or documentation milestone must be recorded under an `Unreleased` section as part of the same change.

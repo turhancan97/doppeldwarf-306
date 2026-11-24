@@ -477,3 +477,14 @@ footer .repo{font-family:"IBM Plex Mono",monospace; font-size:.81rem}
   .verification-table{font-size:.85rem}
   .verification-table thead th{font-size:.75rem}
 }
+
+/* Analytics consent, project page only. Both buttons carry equal weight. */
+.analytics-consent{position:fixed; left:16px; right:16px; bottom:16px; z-index:40; max-width:44rem;
+  margin:0 auto; padding:1rem 1.1rem; background:var(--raised); color:var(--ink);
+  border:1px solid var(--rule); border-radius:10px; box-shadow:0 6px 24px rgb(0 0 0 / .18);
+  display:flex; flex-wrap:wrap; gap:.8rem 1.2rem; align-items:center; font-size:.9rem}
+.analytics-consent[hidden]{display:none}
+.analytics-consent p{flex:1 1 18rem; margin:0; color:var(--ink-2)}
+.analytics-actions{display:flex; gap:.6rem}
+.analytics-settings{font:inherit; padding:0; border:0; background:none; color:var(--blue);
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer}
